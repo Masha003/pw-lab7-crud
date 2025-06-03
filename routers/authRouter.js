@@ -1,17 +1,10 @@
 const express = require('express');
-// const authController = require('../controllers/authController');
+const authController = require('../controllers/authController');
 // const { identifier } = require('../middlewares/identification');
 const router = express.Router();
 
-// router.post('/signup', authController.signup);
-router.post('/signup', (req, res) => {
-    res.json(
-        {
-            message: 'Signup success'
-        }
-    )
-})
-// router.post('/signin', authController.signin);
+router.post('/signup', authController.signup);
+router.post('/signin', authController.signin);
 // router.post('/signout', identifier, authController.signout);
 
 // router.patch(
